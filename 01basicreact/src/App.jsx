@@ -1,5 +1,15 @@
+//CREATING CHAI COMPONENT
+
+import Chai from "./Chai";
+
 function App() {
-  return <h1>hello world | Ritesh Kumar</h1>;
+  return (
+    <>
+      <Chai />
+      <h2>Chai is ready</h2>
+      <p>Chai served</p>
+    </>
+  );
 }
 
 export default App;
