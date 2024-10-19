@@ -11,6 +11,11 @@ function App() {
   //3.to take refrence
   const passwordref = useRef(null);
 
+  //4.
+  const copyPasswordToClipboard = useCallback(() => {
+    window.navigator.clipboard.writeText(Password);
+  }, [Password]);
+
   //2.
   const passwordGenerator = useCallback(() => {
     let pass = "";
