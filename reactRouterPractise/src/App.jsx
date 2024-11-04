@@ -8,19 +8,36 @@ const router = createBrowserRouter([
     path: "/",
     //jab ye wala path / aap choose karanga tab konsa page app render karwana chata ho ..dal do element me
     //path kon sa hoga and element konsa load karwana hai.
-    element: <Home />,
+    element: (
+      <div>
+        <Navbar />
+        <Home />
+      </div>
+    ),
   },
-  { path: "/about", element: <About /> },
+  {
+    path: "/about",
+    element: (
+      <div>
+        <Navbar />
+        <About />
+      </div>
+    ),
+  },
   {
     path: "/dashboard",
-    element: <Dashboard />,
+    element: (
+      <div>
+        <Navbar />
+        <Dashboard />
+      </div>
+    ),
   },
 ]);
 
 function App() {
   return (
     <>
-      <Navbar />
       <RouterProvider router={router} />
     </>
   );
