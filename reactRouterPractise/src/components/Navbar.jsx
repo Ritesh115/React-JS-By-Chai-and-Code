@@ -1,18 +1,40 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import "./Navbar.css";
 
 function Navbar() {
   return (
     <div>
       <ul>
         <li>
-          <Link to={"/"}>Home</Link>
+          <NavLink
+            to={"/"}
+            style={({ isActive }) => {
+              return isActive ? { color: "green" } : {};
+            }}
+          >
+            Home
+          </NavLink>
         </li>
         <li>
-          <Link to={"/about"}>About</Link>
+          <NavLink
+            to={"/about"}
+            style={({ isActive }) => {
+              return isActive ? { color: " green " } : {};
+            }}
+          >
+            About
+          </NavLink>
         </li>
         <li>
-          <Link to={"/dashboard"}>Dashboard</Link>
+          <NavLink
+            to={"/dashboard"}
+            style={({ isActive }) => {
+              return isActive ? { color: "green" } : {};
+            }}
+          >
+            Dashboard
+          </NavLink>
         </li>
       </ul>
     </div>
