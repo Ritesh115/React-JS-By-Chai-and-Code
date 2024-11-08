@@ -3,6 +3,9 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Dashboard from "./components/Dashboard";
 import Navbar from "./components/Navbar";
+import Product from "./components/Product";
+import Navigate from "./components/Navigate";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -30,6 +33,24 @@ const router = createBrowserRouter([
       <div>
         <Navbar />
         <Dashboard />
+      </div>
+    ),
+  },
+  {
+    path: "/Product/:id",
+    element: (
+      <div>
+        <Navbar />
+        <Product />
+      </div>
+    ),
+  },
+  {
+    path: "/navigate",
+    element: (
+      <div>
+        <Navbar />
+        <Navigate />
       </div>
     ),
   },

@@ -36,6 +36,17 @@ function Navbar() {
             Dashboard
           </NavLink>
         </li>
+
+        <li>
+          <NavLink
+            to={"/navigate"}
+            style={({ isActive }) => {
+              return isActive ? { color: "green" } : {};
+            }}
+          >
+            Navigate
+          </NavLink>
+        </li>
       </ul>
     </div>
   );
