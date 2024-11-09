@@ -5,6 +5,8 @@ import Dashboard from "./components/Dashboard";
 import Navbar from "./components/Navbar";
 import Product from "./components/Product";
 import Navigate from "./components/Navigate";
+import Profile from "./components/Profile";
+import Settings from "./components/Settings";
 
 const router = createBrowserRouter([
   {
@@ -35,6 +37,16 @@ const router = createBrowserRouter([
         <Dashboard />
       </div>
     ),
+    children: [
+      {
+        path: "profile",
+        element: <Profile />,
+      },
+      {
+        path: "settings",
+        element: <Settings />,
+      },
+    ],
   },
   {
     path: "/Product/:id",
